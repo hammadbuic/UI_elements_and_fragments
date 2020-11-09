@@ -1,28 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
-
-    <FrameLayout
-        android:id="@+id/fragment_continer"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginLeft="50dp">
-    </FrameLayout>
+    tools:context=".SecondActivity">
     <ImageView
-        android:id="@+id/close_fregment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:src="@drawable/close"
-        android:layout_alignEnd="@id/fragment_continer"
-        android:visibility="invisible"/>
-
-    <ImageView
-        android:id="@+id/ivUser"
+        android:id="@+id/ivSecUser"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
@@ -52,7 +36,7 @@
                     android:src="@drawable/email"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/etEmail"
+                    android:id="@+id/secMail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email Address"
@@ -80,7 +64,7 @@
                     android:src="@drawable/user"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/etName"
+                    android:id="@+id/secName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name"
@@ -108,7 +92,7 @@
                     android:src="@drawable/calender"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/etDate"
+                    android:id="@+id/secDob"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:hint="DOB"
@@ -120,12 +104,6 @@
                     android:textColor="#fff"
                     android:inputType="date"
                     />
-                <ImageView
-                    android:id="@+id/ivDateSelect"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/date"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -141,7 +119,7 @@
                     android:layout_height="20dp"
                     android:src="@drawable/city"
                     android:layout_gravity="center"/>
-                <AutoCompleteTextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="City"
@@ -152,7 +130,7 @@
                     android:textSize="16dp"
                     android:textColor="#fff"
                     android:inputType="text"
-                    android:id="@+id/autCity"
+                    android:id="@+id/secCity"
                     />
             </LinearLayout>
             <LinearLayout
@@ -170,7 +148,7 @@
                     android:src="@drawable/mobile"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/etMobile"
+                    android:id="@+id/secMobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Mobile Number"
@@ -198,7 +176,7 @@
                     android:src="@drawable/country"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/etCountry"
+                    android:id="@+id/secCountry"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:hint="Country"
@@ -208,14 +186,8 @@
                     android:letterSpacing="0.1"
                     android:textSize="16dp"
                     android:textColor="#fff"
-                    android:inputType="text"
+                    android:inputType="number"
                     />
-                <ImageView
-                    android:id="@+id/ivCountrySelect"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_place_black_24dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -224,24 +196,4 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="580dp"
-        android:layout_marginRight="25dp">
-
-        <Button
-            android:id="@+id/btnSignup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-            android:gravity="center"
-            android:padding="15dp"
-            android:text="SIGNUP"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-    </LinearLayout>
 </RelativeLayout>

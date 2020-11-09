@@ -29,13 +29,14 @@ public class Country_Fragment extends Fragment {
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(getContext(),R.layout.country_list_view,country);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(listClick);
-        //getFragmentManager().beginTransaction().remove(Country_Fragment.this).commit();
         return rootView;
     }
     private AdapterView.OnItemClickListener listClick = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             String itemValue = (String) lv.getItemAtPosition(i);
+            MainActivity main =(MainActivity) getActivity();
+            main.recieveCountry(itemValue);
             Toast.makeText(getActivity(),"Selected Country: "+itemValue,Toast.LENGTH_SHORT).show();
         }
     };
